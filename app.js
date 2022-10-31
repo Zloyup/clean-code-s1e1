@@ -82,10 +82,14 @@ const editTask = function () {
 
     let listItem = this.parentNode;
 
-    let editInput = listItem.querySelector('input[type=text]');
+    let editInput = listItem.querySelector('input[type="text"]');
+    console.log("1");
     let label = listItem.querySelector("label");
+    console.log("2");
     let editBtn = listItem.querySelector(".edit");
-    let containsClass = listItem.classList.contains("editMode");
+    console.log("3");
+    let containsClass = listItem.classList.contains("edit-mode");
+    console.log("4");
     //If class of the parent is .editmode
     if (containsClass) {
 
@@ -99,7 +103,7 @@ const editTask = function () {
     }
 
     //toggle .editmode on the parent.
-    listItem.classList.toggle("editMode");
+    listItem.classList.toggle("edit-mode");
 };
 
 

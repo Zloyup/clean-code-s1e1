@@ -3,6 +3,7 @@
   background-color: #f8f8f8;
   color: #333;
   font-family: Lato, sans-serif;
+  height: 100vh;
 }
 
 .eisen-matrix {
@@ -12,11 +13,11 @@
   text-align: right;
 }
 
-.eisen-matrix img {
+.eisen-matrix__image {
   width: 100%;
 }
 
-.eisen-matrix .more-inf {
+.eisen-matrix__more-inf {
   font-family: fantasy, cursive;
 }
 
@@ -28,19 +29,19 @@
 
 }
 
-.center-main-elem {
+.main-section {
   display: block;
   width: 500px;
   margin: 0 auto 0;
 }
 
-.task {
+.new-task__input {
   width: 56%;
   display: inline-block;
   flex-grow: 1;
 }
 
-.task-row-wrapper {
+.new-task {
   display: flex;
 }
 
@@ -153,7 +154,7 @@ li>input[type="text"] {
 }
 
 /* Completed */
-#completed-tasks label {
+ul#completed-tasks label {
   text-decoration: line-through;
   color: #888;
 }
@@ -163,11 +164,11 @@ ul li input[type="text"] {
   display: none;
 }
 
-.edit-mode input[type="text"] {
+ul li.edit-mode input[type="text"] {
   display: inline-block;
   width: 224px;
 }
 
-.edit-mode label {
+ul li.edit-mode label {
   display: none;
 }
