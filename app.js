@@ -15,7 +15,7 @@ let completedTasksHolder = document.getElementById("completed-tasks");//complete
 
 
 //New task list item
-let createNewTaskElement = function (taskString) {
+const createNewTaskElement = function (taskString) {
 
     let listItem = document.createElement("li");
 
@@ -59,7 +59,7 @@ let createNewTaskElement = function (taskString) {
 
 
 
-let addTask = function () {
+const addTask = function () {
     console.log("Add Task...");
     //Create a new list item with the text from the #new-task:
     if (!taskInput.value) return;
@@ -75,7 +75,7 @@ let addTask = function () {
 
 //Edit an existing task.
 
-let editTask = function () {
+const editTask = function () {
     console.log("Edit Task...");
     console.log("Change 'edit' to 'save'");
 
@@ -104,7 +104,7 @@ let editTask = function () {
 
 
 //Delete task.
-let deleteTask = function () {
+const deleteTask = function () {
     console.log("Delete Task...");
 
     let listItem = this.parentNode;
@@ -116,7 +116,7 @@ let deleteTask = function () {
 
 
 //Mark task completed
-let taskCompleted = function () {
+const taskCompleted = function () {
     console.log("Complete Task...");
 
     //Append the task list item to the #completed-tasks
@@ -127,7 +127,7 @@ let taskCompleted = function () {
 }
 
 
-let taskIncomplete = function () {
+const taskIncomplete = function () {
     console.log("Incomplete Task...");
     //Mark task as incomplete.
     //When the checkbox is unchecked
@@ -139,7 +139,7 @@ let taskIncomplete = function () {
 
 
 
-let ajaxRequest = function () {
+const ajaxRequest = function () {
     console.log("AJAX Request");
 }
 
@@ -152,7 +152,7 @@ addButton.addEventListener("click", addTask);
 addButton.addEventListener("click", ajaxRequest);
 
 
-let bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
+const bindTaskEvents = function (taskListItem, checkBoxEventHandler) {
     console.log("bind list item events");
     //select ListItems children
     let checkBox = taskListItem.querySelector("input[type=checkbox]");
